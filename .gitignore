@@ -1,0 +1,4 @@
+# in Lenet, ignore data and debug files
+Lenet/__pycache__
+Lenet/.vscode
+Lenet/data
