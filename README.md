@@ -11,8 +11,17 @@
 reference to `https://blog.csdn.net/qq_43369406/article/details/127134277`
 
 2. Conda, environment. ✅
+3. CNN. ✅
 
-3. VGGnet. 
+4. VGGnet.
+5. Resnet 
+6. Unet.
+7. PINN demo.
+
+8. download dataset zenodo.
+
+9. read paper "Deep learning acceleration of multiscale superresolution localization photoacoustic imaging". ✅
+10. Pytorch learning. ✅
 
 
 ### Q&A

@@ -2,3 +2,6 @@
 Lenet/__pycache__
 Lenet/.vscode
 Lenet/data
+# MNIST
+MNIST/__pycache__
+MNIST/data
