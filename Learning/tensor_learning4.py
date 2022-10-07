@@ -38,5 +38,24 @@ b = torch.rand(1, 32, 1, 1)
 
 print((a + b).shape)
 
+#%%
+import torch
+
+# cat() to merge
+a = torch.rand(4, 32, 8)
+b = torch.rand(5, 32, 8)
+print(torch.cat([a, b], dim = 0).shape) # merge
+
+# stack() to create new dimension
+a1 = torch.randn(3, 28, 28)
+a2 = torch.randn(3, 28, 28)
+print(torch.stack([a1, a2], dim = 0).shape)
+
+# split() to unpack by length
+a = torch.randn(3, 28, 28)
+b, c = a.split([2, 1], dim = 0)
+print("a's shape is {}, b's shape is {}, c's shape is {}".format(a.shape, b.shape, c.shape))
+
+# chunk() to unpack by number
+d, e = b.chunk(2, dim=1)
 # %%
-print("down")
