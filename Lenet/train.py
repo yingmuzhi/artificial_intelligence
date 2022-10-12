@@ -48,13 +48,13 @@ for epoch in range(2):  # loop
         inputs, labels = data
         
         # zero the parameter gradients
-        optimizer.zero_grad()
+        optimizer.zero_grad()                   # batch size is associated with hardware, while we can use zero_grad to get bigger batch size
         
         # forward + backward + optimize
-        outputs = net(inputs)
-        loss = loss_function(outputs, labels)
-        loss.backward()
-        optimizer.step()
+        outputs = net(inputs)                   # forward propagation
+        loss = loss_function(outputs, labels)   # calculate loss
+        loss.backward()                         # back propagation
+        optimizer.step()                        # update weight
 
         # print statistics
         running_loss += loss.item()
