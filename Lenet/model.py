@@ -25,12 +25,12 @@ class LeNet(nn.Module):
         return x
 
 
-# debug
-import torch
-input1 = torch.rand([32, 3, 32, 32])
-model = LeNet()
-print(model)
-output = model(input1)
+# # debug
+# import torch
+# input1 = torch.rand([32, 3, 32, 32])
+# model = LeNet()
+# print(model)
+# output = model(input1)
 
 # if __name__ == "__main__":
 #     print("h")

@@ -5,3 +5,10 @@ Lenet/data
 # MNIST
 MNIST/__pycache__
 MNIST/data
+AlexNet/__pycache__
+AlexNet/flower_data
+Unet/__pycache__
+Unet/Medical_Datasets
+Unet/params
+Unet/result
+Unet/diy_*

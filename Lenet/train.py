@@ -1,3 +1,9 @@
+# get project_dir
+import os
+import sys
+project_dir = os.path.dirname(__file__)
+sys.path.append(project_dir)
+# ---
 from random import shuffle
 import torch
 import torchvision
@@ -12,11 +18,11 @@ import numpy as np
 # modify on dataset, 预处理
 transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
 # train data --- download 50000 pics
-trainset = torchvision.datasets.CIFAR10(root="./data", train=True, download=False, transform = transform)
+trainset = torchvision.datasets.CIFAR10(root=project_dir + "/data", train=True, download=False, transform = transform)
 # modify on dataset, get it into different batch
 trainloader = torch.utils.data.DataLoader(trainset, batch_size=36, shuffle=True, num_workers=0) 
 # test data --- dowenload 10000 pics
-testset = torchvision.datasets.CIFAR10(root="./data", train=False, download=False, transform = transform)
+testset = torchvision.datasets.CIFAR10(root=project_dir + "/data", train=False, download=False, transform = transform)
 testloader = torch.utils.data.DataLoader(testset, batch_size = 10000, shuffle = False, num_workers = 0)
 test_data_iter = iter(testloader)
 test_image, test_label = test_data_iter.next()
