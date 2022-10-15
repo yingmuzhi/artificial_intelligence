@@ -28,6 +28,4 @@ if (age >= 21) and (age <= 99):
 my_list = ["is", "ymz"]
 if "ymzc" not in my_list:
     print("I'm not in")
-
-
 # %%

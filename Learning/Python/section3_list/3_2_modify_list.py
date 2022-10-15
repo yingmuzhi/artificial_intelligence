@@ -6,12 +6,12 @@ motorcycles = ["honda", "yamaha", "suzuki"]
 print(motorcycles)
 motorcycles[0] = "ducati"
 print(motorcycles)
-# 添加元素
+# 添加元素  一般用append()方法
 motorcycles.append("ducati")    # 尾部添加
 print(motorcycles)
 motorcycles.insert(0, "honda")  # 指定序列位置添加
 print(motorcycles)
-# 删除元素
+# 删除元素  一般用pop()方法
 del motorcycles[1]              # 删除指定序列元素
 print(motorcycles)
 popped_motorcycle = motorcycles.pop()   # 删除尾部元素，并且像栈一样弹出该元素
