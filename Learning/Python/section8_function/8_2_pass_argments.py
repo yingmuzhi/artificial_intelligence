@@ -11,7 +11,7 @@ def describe_pet(animal_type, pet_name):
     print("I have a {}, and its name is {}".format(animal_type, pet_name))
 
 describe_pet(animal_type="hamster", pet_name="harry")
-# describe_pet({"animal_type": "hamster", "pet_name": "harry})
+# describe_pet({"animal_type": "hamster", "pet_name": "harry"})
 describe_pet(pet_name="harry", animal_type="hamster")   # 跟顺序无关
 # 默认值形参
 def describe_pet(animal_type, pet_name = "ymz"):    # 有默认值的形参应该放在最后给出
