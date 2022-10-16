@@ -7,7 +7,7 @@ while unconfirmed_users:
     current_user = unconfirmed_users.pop()
     confirmed_users.append(current_user)
     print("1")
-# 使用 while 删除 list中特定值的所有元素
+# 使用 while...in 删除 list 中特定值的所有元素
 # list.remove()方法只能删除出现该值的第一个元素，所以要删除所有元素得使用while循环
 pets = ["dog", "cat", "dog", "tiger", "dog", ]
 while "dog" in pets:

@@ -12,12 +12,12 @@ def get_formatted_name(first_name, last_name):
 musician = get_formatted_name("max", "shi")
 print(musician)
 # 让实参变成可选的
-def get_formatted_name(first_name, last_name, middle_name = ""):
+def get_formatted_name(first_name, last_name, middle_name = None):
     if middle_name:
         full_name = "{} {} {}".format(first_name, middle_name, last_name)
     else:
         full_name = "{} {}".format(first_name, last_name)
     return full_name.title()
 
-musician = get_formatted_name("max", "shi", "ymz")
+musician = get_formatted_name("max", "shi", )
 print(musician)

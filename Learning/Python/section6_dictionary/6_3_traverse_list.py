@@ -5,6 +5,15 @@ user_0 = {
     "first": "enrico",
     "last": "fermi",
 }
+for item in user_0.items(): # (key, value)类型返回是tuple
+    print(type(item))
+
+for key in user_0.keys():   # key类型为string
+    print(type(key))
+
+for value in user_0.values():   # value类型由value决定
+    print(type(value))
+
 # 遍历所有键值对
 for key, value in user_0.items():
     print("key is {}, and value is {}".format(key, value))
@@ -21,7 +30,7 @@ for value in user_0.values():
     print(value.title())
 # 遍历值，只遍历不重复的值
 for value in set(user_0.values()):
-    print(value.title())
+    print(value)
 # 集合，不以特定顺序存储非重复元素
 my_set = {"python", "c", "c", "cpp"}
 print(my_set)
