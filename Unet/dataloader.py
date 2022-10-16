@@ -74,12 +74,14 @@ class UnetDataset(Dataset):
         image = cvtColor(image)
         image = resize_image(image,(512, 512))[0]
         
+        
         return transforms(image),transforms(label_image)
 
 if __name__ == '__main__':
-    weight_path = 'params/vivo_unet.pth'
-    data_path = r'C:\Users\Asaue\Desktop\u-net\data'
-    save_path = r'C:\Users\Asaue\Desktop\u-net\vivo_result'
-    VivoDataset(data_path).__getitem__(0)
-    # UnetDataset(data_path).__getitem__(0)
-    # data_path = r'C:\Users\Asaue\Desktop\u-net\Medical_Datasets'
+    # weight_path = 'params/vivo_unet.pth'
+    # data_path = r'C:\Users\Asaue\Desktop\u-net\data'
+    # save_path = r'C:\Users\Asaue\Desktop\u-net\vivo_result'
+    # VivoDataset(data_path).__getitem__(0)
+    data_path = r'C:\Users\Asaue\Desktop\u-net\Medical_Datasets'    # r忽视转义字符
+    UnetDataset(data_path).__getitem__(0)
+    
