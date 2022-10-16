@@ -9,6 +9,8 @@
 
 1. learning from book "Python编程：从入门到实践（第2版）"
 
+section 1 - section 9 ✅
+
 
 ### Q&A
 
