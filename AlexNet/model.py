@@ -11,7 +11,7 @@ class AlexNet(nn.Module):
     def __init__(self, num_classes = 1000, init_weights = False) -> None:
         super(AlexNet, self).__init__()
         self.features = nn.Sequential(
-            nn.Conv2d(in_channel = 3, out_channel = 48, kernel_size=11, stride=4, padding = 2),    # in_channel = input matrix channel(也即上一层的output_channel) = kernel channel;   out_channel = output matrix channel = kernels;
+            nn.Conv2d(in_channels = 3, out_channels = 48, kernel_size=11, stride=4, padding = 2),    # in_channel = input matrix channel(也即上一层的output_channel) = kernel channel;   out_channel = output matrix channel = kernels;
             nn.ReLU(inplace = True),
             nn.MaxPool2d(kernel_size = 3, stride = 2),
             nn.Conv2d(48, 128, kernel_size=5, padding=2),
@@ -44,4 +44,4 @@ class AlexNet(nn.Module):
         return x
 
     def _initialize_weight():
-        pass
+        print("in")
