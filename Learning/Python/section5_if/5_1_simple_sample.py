@@ -24,7 +24,7 @@ if (age >= 21) and (age <= 99):
 
 
 # %%
-# 使用 in 判断 list 中是否含有特定值
+# 使用 if...in 判断 list 中是否含有特定值
 my_list = ["is", "ymz"]
 if "ymzc" not in my_list:
     print("I'm not in")

@@ -1,3 +1,8 @@
+# --- add path
+import os, sys
+project_path = os.path.dirname(__file__)
+sys.path.append(project_path)
+# ---
 from cProfile import label
 import os
 from torch import nn,optim
@@ -11,9 +16,9 @@ from UNet import UNet
 device=torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 # 细胞数据集
-save_path = r'./'
-weight_path = 'params/unet.pth'
-data_path = r'./Medical_Datasets'
+save_path = project_path
+weight_path = project_path + '/params/unet.pth'
+data_path = project_path + r'/Medical_Datasets'
 save_path = os.path.join(save_path,'result')
 
 batch_size = 1
@@ -62,6 +67,6 @@ if __name__ == '__main__':
                 #img=torch.stack([_image,_segment_image,_out_image],dim=0)
                 img=torch.stack([_out_image],dim=0)
                 
-                save_image(img,f'./{save_path}/{index}_{j}.png')
+                save_image(img,f'{save_path}/{index}_{j}.png')
 
         epoch+=1
