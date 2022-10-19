@@ -1,0 +1,4 @@
+I love cpp,
+and i also like python.
+I love cpp too,
+and i also like python too.

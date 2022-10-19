@@ -17,8 +17,46 @@ with open(project_path + r"/test/file_name.txt") as file_object:
 print(contents.rstrip())
 
 # 逐行读取
+# 通过对 文件对象 执行循环遍历来实现
 filename = project_path + "/pi_digits.txt"
 
 with open(filename) as file_object:
     for line in file_object:    # 逐行读取
         print(line.rstrip())
+
+#%%
+# 使用list存储文件内容，使得在with外面也能访问文件内容
+# 可以用文件对象的readlines()实现：readlines()从文件中读取每一行，并存储在一个列表中，每一个元素是一行的内容。
+# 也可以通过循环遍历文件对象实现
+file_name = "pi_digits.txt"
+
+with open(file_name) as file_object:
+    # lines = file_object.readlines()
+    lines = []
+    for line in file_object:
+        lines.append(line)  # 将硬盘上文件内容 读入 内存中
+
+for line in lines:
+    print(line.rsplit())
+# %%
+# 强制转换
+# 从文件中读取数据默认数据类型是str, 使用int()强制转换为int类型, 是用float()强制转换为float类型.
+a = "11"
+print(type(a))
+print(type(float(a)))
+print(type(int(a)))
+
+# %%
+# 用 if...in 判断文件中是否含有你需要的字符串
+# 
+with open(file_name) as file_object:
+    lines = file_object.readlines()
+
+pi_string:str = ""
+for line in lines:
+    pi_string += line.strip()
+
+if "3.14" in pi_string:
+    print("True")
+
+# %%
