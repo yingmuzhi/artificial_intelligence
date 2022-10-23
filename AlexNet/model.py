@@ -43,5 +43,5 @@ class AlexNet(nn.Module):
         x = self.classifier(x)
         return x
 
-    def _initialize_weight():
+    def _initialize_weights():
         print("in")
