@@ -44,13 +44,14 @@ for epoch in range(1):  # loop
         loss.backward()
         optimizer.step()    # update parameters in net
 
+        # print(loss.shape)
         running_loss += loss.item()
         if step % 500 == 499:
             with torch.no_grad():   # 在下面的操作中不会自动计算梯度
                 outputs = net(test_image)   # [batch, 10]
                 # print("test_image's shape is {}, and outputs' shape is {}".format(test_image.shape, outputs.shape))
                 predict_y = torch.max(outputs, dim=1)[1]
-                # print("predict_y's shape is {}".format(predict_y.shape))
+                print("predict_y's shape is {}".format(predict_y.shape))
                 # print("sum is {}, item is {}".format((predict_y == test_label).sum(), (predict_y == test_label).sum().item()))
                 accuracy = (predict_y == test_label).sum().item() / test_label.size(0) 
 
