@@ -18,3 +18,9 @@ Unet/params
 Unet/result
 Unet/diy_*
 Unet/utils
+_math/*
+_utils/*
+_data/*
+Unet2
+_data/*
+_environment/*
