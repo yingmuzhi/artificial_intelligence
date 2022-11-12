@@ -1,5 +1,16 @@
 # AI
 
+## 20221112
+
+nnUnet
+
+Unet
+
+---
+
+## week4
+
+nnUnet
 
 ---
 
